@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+@import './utils.css';
+@import './typography.css';
+
+:root {
+  --color-background: #0d0d0d;
+  --color-default-text: #f2f2f2;
+
+  [data-theme='dark'] {
+    --color-background: #f2f2f2;
+    --color-default-text: #0d0d0d;
+  }
+}
+
+/* 사용자 OS 설정이 다크모드 일때 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #f2f2f2;
+    --color-default-text: #0d0d0d;
+  }
+}
+
+body {
+  /* background-color: var(--color-background); */
+  color: var(--color-default-text);
+}
